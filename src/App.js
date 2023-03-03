@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./views/LandingPage/LandingPage";
-import SignIn from "./views/SignIn/SignIn";
+import LandingPage from "./Pages/LandingPage/LandingPage";
+import SignIn from "./Pages/SignIn/SignIn";
 
 function App() {
   return (
