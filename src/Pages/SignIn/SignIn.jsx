@@ -16,7 +16,7 @@ const SignIn = () => {
           <input className="mb-5 px-3 py-3 w-full rounded-sm " type="text" name="" id="username" />
 
           <h3 className=" text-white pb-3 text-base opacity-90">Password</h3>
-          <input className="mb-8 px-3 py-3 w-full rounded-sm " type="text" name="" id="password" />
+          <input className="mb-8 px-3 py-3 w-full rounded-sm " type="password" name="" id="password" />
         </div>
         <div>
           <button className="bg-[#e6592e] hover:bg-[#ae4221] w-full py-4 rounded-sm font-bold text-[#FCFBFA] text-base tracking-wide ">LOGIN</button>
