@@ -10,9 +10,15 @@ export default function Analytics() {
           <p className=" text-3xl mt-3 tracking-wider font-bold">23,667</p>
 
           <div className="tags flex gap-3 py-3 mt-2">
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">234</p>
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">12</p>
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">589</p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              234
+            </p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              12
+            </p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              589
+            </p>
           </div>
         </article>
 
@@ -21,9 +27,15 @@ export default function Analytics() {
           <p className=" text-3xl mt-3 tracking-wider font-bold">23,667</p>
 
           <div className="tags flex gap-3 py-3 mt-2">
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">234</p>
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">12</p>
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">589</p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              234
+            </p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              12
+            </p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              589
+            </p>
           </div>
         </article>
 
@@ -32,9 +44,15 @@ export default function Analytics() {
           <p className=" text-3xl mt-3 tracking-wider font-bold">23,667</p>
 
           <div className="tags flex gap-3 py-3 mt-2">
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">234</p>
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">12</p>
-            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">589</p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              234
+            </p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              12
+            </p>
+            <p className="text-sm py-1 px-4 rounded-full bg-[rgba(255,255,255,0.09)] ">
+              589
+            </p>
           </div>
         </article>
       </div>

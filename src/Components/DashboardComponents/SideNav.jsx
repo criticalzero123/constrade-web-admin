@@ -15,11 +15,12 @@ import {
 } from "react-icons/md";
 
 import { IoIosWallet } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function SideNav() {
   return (
-    <nav className="flex py-2 px-3 h-screen w-64 bg-[rgba(255,255,255,0.13)] text-white flex-col justify-around">
-      <div className="admin-info text-center flex justify-center items-center">
+    <nav className="flex py-2 px-3 h-screen w-full bg-[rgba(255,255,255,0.13)] text-white flex-col justify-around">
+      <div className="text-center flex justify-center items-center">
         <div className="content">
           <img
             className="rounded-full h-16 w-16 mx-auto mb-4"
@@ -36,27 +37,33 @@ export default function SideNav() {
           System management
         </h3>
         <ul>
-          <li className="py-3 px-2 mb-2 rounded-sm hover:cursor-pointer text-[#e6592e] font-bold">
-            <MdDashboard
-              size={20}
-              className="inline-block align-text-bottom mr-2"
-            />
-            <p className="inline-block">Dashboard</p>
-          </li>
-          <li className="py-3 px-2 mb-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] opacity-60 hover:cursor-pointer">
-            <MdSupervisedUserCircle
-              size={20}
-              className="inline-block align-text-bottom mr-2"
-            />
-            <p className="inline-block">Accounts</p>
-          </li>
-          <li className="py-3 px-2 mb-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] opacity-60 hover:cursor-pointer">
-            <MdShoppingCart
-              size={20}
-              className="inline-block align-text-bottom mr-2"
-            />
-            <p className="inline-block">Products</p>
-          </li>
+          <Link to="/dashboard">
+            <li className="py-3 px-2 mb-2 rounded-sm hover:cursor-pointer text-[#e6592e] font-bold">
+              <MdDashboard
+                size={20}
+                className="inline-block align-text-bottom mr-2"
+              />
+              <p className="inline-block">Dashboard</p>
+            </li>
+          </Link>
+          <Link to="/dashboard/account">
+            <li className="py-3 px-2 mb-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] opacity-60 hover:cursor-pointer">
+              <MdSupervisedUserCircle
+                size={20}
+                className="inline-block align-text-bottom mr-2"
+              />
+              <p className="inline-block">Accounts</p>
+            </li>
+          </Link>
+          <Link to="/dashboard/product">
+            <li className="py-3 px-2 mb-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] opacity-60 hover:cursor-pointer">
+              <MdShoppingCart
+                size={20}
+                className="inline-block align-text-bottom mr-2"
+              />
+              <p className="inline-block">Products</p>
+            </li>
+          </Link>
           <li className="py-3 px-2 mb-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] opacity-60 hover:cursor-pointer">
             <IoIosWallet
               size={20}

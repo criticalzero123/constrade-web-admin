@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Import image asset
-import appLogo from "../../assets/App-Dark.svg";
+import appLogo from "../../Assets/App-Dark.svg";
 
 const SignIn = () => {
   return (

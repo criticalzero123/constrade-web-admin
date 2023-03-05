@@ -1,18 +1,16 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import SideNav from "../../Components/DashboardComponents/SideNav";
-import Statistics from "../../Components/DashboardComponents/Analytics";
 
 export default function Dashboard() {
   return (
-    <div className="wrapper bg-black flex">
-      <SideNav />
+    <div className="wrapper bg-black grid grid-cols-6 gap-4">
+      <div className="md:grid-cols-2">
+        <SideNav />
+      </div>
 
-      <div className=" grow ">
-        <section className="py-4 px-8">
-          <h1 className="font-bold text-white text-2xl mb-4 mt-6">Dashboard</h1>
-          <Statistics />
-        </section>
-        <section className="context-screen"></section>
+      <div className="md:grid-cols-4">
+        <Outlet />
       </div>
     </div>
   );
