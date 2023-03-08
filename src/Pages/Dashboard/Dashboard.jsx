@@ -1,17 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import SideNav from "../../Components/DashboardComponents/SideNav";
+import SideNav from "../../Components/DashboardComponents/Nav";
 
 export default function Dashboard() {
   return (
-    <div className="wrapper bg-black grid grid-cols-6 gap-4">
-      <div className="md:grid-cols-2">
+    <div className="flex bg-black">
+      <aside>
         <SideNav />
-      </div>
+      </aside>
 
-      <div className="md:grid-cols-4">
-        <Outlet />
-      </div>
+      <main></main>
     </div>
   );
 }
