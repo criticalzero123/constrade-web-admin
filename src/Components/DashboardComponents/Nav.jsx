@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <nav className="bg-[rgba(255,255,255,0.13)] text-white p-4 h-screen flex justify-around flex-col text-sm">
+    <nav className="bg-[rgba(255,255,255,0.13)] text-white h-screen p-4 flex justify-around flex-col text-sm">
       <div>
         <img className="h-16 w-16" src={AppLogo} alt="User profile" />
       </div>
@@ -37,7 +37,7 @@ export default function Nav() {
             </a>
           </li>
 
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-80">
+          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
             <a href="">
               <MdSupervisedUserCircle
                 size={18}
@@ -47,7 +47,7 @@ export default function Nav() {
             </a>
           </li>
 
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-80">
+          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
             <a href="">
               <MdShoppingCart
                 size={18}
@@ -57,7 +57,7 @@ export default function Nav() {
             </a>
           </li>
 
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-80">
+          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
             <a href="">
               <IoIosWallet
                 size={18}
@@ -67,7 +67,7 @@ export default function Nav() {
             </a>
           </li>
 
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-80">
+          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
             <a href="">
               <MdSupervisorAccount
                 size={18}
@@ -77,7 +77,7 @@ export default function Nav() {
             </a>
           </li>
 
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-80">
+          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
             <a href="">
               <MdFeedback
                 size={18}
@@ -87,7 +87,7 @@ export default function Nav() {
             </a>
           </li>
 
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-80">
+          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
             <a href="">
               <MdBugReport
                 size={18}
@@ -106,9 +106,9 @@ export default function Nav() {
           src={Avatar}
           alt="User profile"
         />
-        <h3 className="font-base font-bold mb-1 ">James Dylan</h3>
-        <p className="text-xs tracking-wider opacity-80">ADMIN</p>
-        <button className="py-3 w-full mt-5 bg-red-500 rounded-sm">
+        <h3 className="text-base font-bold mb-1 ">James Dylan</h3>
+        <p className="text-xs tracking-wider opacity-70">ADMIN</p>
+        <button className="py-3 w-full mt-5 bg-red-500 rounded-sm hover:bg-red-600">
           <MdOutlineLogout
             size={18}
             className=" inline-block align-text-bottom  mr-2"

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      font-family: 'Outfit';
-    }
+  html {
+    font-family: "Outfit";
+    background-color: black;
   }
+}
