@@ -3,9 +3,15 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import thunk from "redux-thunk";
 
-import { getAllUserReducer } from "./reducer/userReducer";
+import {
+  getAllUserReducer,
+  changeUserStatusReducer,
+} from "./reducer/userReducer";
 
-const finalReducer = combineReducers({ getAllUserReducer });
+const finalReducer = combineReducers({
+  getAllUserReducer,
+  changeUserStatusReducer,
+});
 
 const composeEnhancers = composeWithDevTools({});
 

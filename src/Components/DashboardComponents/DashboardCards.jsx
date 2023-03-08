@@ -1,6 +1,6 @@
 import React from "react";
 
-import List from "../DashboardComponents/VerificationList";
+import List from "./UserList";
 
 // Icon assets
 import { MdOutlineChevronRight } from "react-icons/md";
