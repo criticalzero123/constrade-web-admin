@@ -65,19 +65,19 @@ export default function Analytics() {
       <DashboardCards
         title={"Pending Verification"}
         description={"See pending user verifications"}
-        mike={"verification"}
+        path={"verification"}
       />
       {/* Status cards */}
       <section className="flex gap-3">
         <DashboardCards
           title={"Product Report"}
           description={"See product report verifications"}
-          mike={"product"}
+          path={"product"}
         />
         <DashboardCards
           title={"User Report"}
           description={"See user report verifications"}
-          mike={"account"}
+          path={"account"}
         />
       </section>
     </>

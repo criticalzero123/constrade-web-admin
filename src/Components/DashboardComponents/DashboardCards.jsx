@@ -7,12 +7,12 @@ import { MdOutlineChevronRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 export default function DashboardCards(props) {
-  const { title, description, mike } = props;
+  const { title, description, path } = props;
 
   return (
     <section className=" text-white font-bold bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] rounded-sm grow">
       {/* Header */}
-      <Link to={`/dashboard/${mike}`}>
+      <Link to={`/dashboard/${path}`}>
         <div className="flex justify-between place-items-center p-4 bg-[rgba(255,255,255,0.20)]">
           {/* TODO: Encapsulate whole header to an outlet, whole header container should be clickable */}
           <div>
