@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <nav className="bg-[rgba(255,255,255,0.13)] text-white h-screen p-4 flex justify-around flex-col text-sm">
+    <nav className="bg-[rgba(255,255,255,0.20)] text-white h-screen p-4 flex justify-around flex-col text-sm">
       <div>
         <img className="h-16 w-16" src={AppLogo} alt="User profile" />
       </div>

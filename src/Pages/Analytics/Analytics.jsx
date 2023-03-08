@@ -11,8 +11,7 @@ import {
 
 export default function Analytics() {
   return (
-    <section className="">
-      <h1 className="font-bold text-2xl text-white mt-3 py-4">Dashboard</h1>
+    <section>
       {/* Product, Users, Transactions, User reports, Feedbacks, Bugs */}
       <div className="cards flex mt-2 gap-8">
         <article className="text-white bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] pt-5 px-4 rounded-sm grow">
