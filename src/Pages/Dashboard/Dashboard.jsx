@@ -1,12 +1,14 @@
 import React from "react";
 
 import SideNav from "../../Components/DashboardComponents/Nav";
-import Analytics from "../Analytics/Analytics";
-import DashboardCards from "../../Components/DashboardComponents/DashboardCards";
-
-import { MdNotifications, MdChatBubble, MdSettings } from "react-icons/md";
+import { Outlet, useLocation } from "react-router-dom";
 
 export default function Dashboard() {
+  const location = useLocation();
+
+  const currentlocation = location.pathname.split("/");
+  const path = currentlocation[currentlocation.length - 1];
+
   return (
     <div className="flex text-white ">
       <aside className="fixed">
@@ -17,27 +19,16 @@ export default function Dashboard() {
         {/* Header */}
         <div className="flex justify-between place-items-center ">
           <div>
-            <p className="text-sm opacity-80 mb-3 font-medium">
-              Dashboard / Overview
-            </p>
-            <h1 className="font-bold text-2xl">Dashboard</h1>
-          </div>
-
-          {/* Icons */}
-          <div className="flex gap-8">
-            <MdNotifications size={24} />
-            <MdChatBubble size={24} />
-            <MdSettings size={24} />
+            <div className="flex items-center flex-wrap">
+              <p className="text-sm opacity-80 font-medium">Dashboard /</p>
+              <p className="text-white opacity-100 capitalize text-sm font-medium ml-1">
+                {path !== "dashboard" && path}
+              </p>
+            </div>
+            <h1 className="font-bold text-2xl capitalize">{path}</h1>
           </div>
         </div>
-        <Analytics />
-
-        <DashboardCards />
-        {/* Status cards */}
-        <section className="flex gap-3">
-          <DashboardCards />
-          <DashboardCards />
-        </section>
+        <Outlet />
       </main>
     </div>
   );

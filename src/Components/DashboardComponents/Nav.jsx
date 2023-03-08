@@ -15,9 +15,20 @@ import {
 } from "react-icons/md";
 
 import { IoIosWallet } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {
+  const location = useLocation();
+
+  const currentlocation = location.pathname.split("/");
+  const path = currentlocation[currentlocation.length - 1];
+
+  const onActiveStyle = (destination) => {
+    return path === destination
+      ? "bg-red-500 hover:opacity-100"
+      : "hover:bg-[rgba(255,255,255,0.10)] opacity-70";
+  };
+
   return (
     <nav className="bg-[rgba(255,255,255,0.20)] text-white h-screen p-4 flex justify-around flex-col text-sm">
       <div>
@@ -27,75 +38,95 @@ export default function Nav() {
       {/* Navigations */}
       <div>
         <ul>
-          <li className="py-3 mb-2 rounded-sm px-3 bg-red-500">
-            <a href="">
+          <Link to="/dashboard">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "dashboard"
+              )}`}
+            >
               <MdDashboard
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
               Dashboard
-            </a>
-          </li>
-
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
-            <a href="">
+            </li>
+          </Link>
+          <Link to="/dashboard/account">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "account"
+              )}`}
+            >
               <MdSupervisedUserCircle
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
               Accounts
-            </a>
-          </li>
-
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
-            <a href="">
+            </li>
+          </Link>
+          <Link to="/dashboard/product">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "product"
+              )}`}
+            >
               <MdShoppingCart
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
               Products
-            </a>
-          </li>
-
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
-            <a href="">
+            </li>
+          </Link>
+          <Link to="/wallet">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle("wallet")}`}
+            >
               <IoIosWallet
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
               Wallets
-            </a>
-          </li>
-
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
-            <a href="">
+            </li>
+          </Link>
+          <Link to="/community">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "community"
+              )}`}
+            >
               <MdSupervisorAccount
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
               Communities
-            </a>
-          </li>
-
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
-            <a href="">
+            </li>{" "}
+          </Link>
+          <Link to="/user-feedback">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "user-feedback"
+              )}`}
+            >
               <MdFeedback
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
               User feedbacks
-            </a>
-          </li>
-
-          <li className="py-3 mb-2 rounded-sm px-3 opacity-70 hover:bg-[rgba(255,255,255,0.10)]  hover:opacity-100">
-            <a href="">
+            </li>
+          </Link>
+          <Link to="/bug-report">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "bug-report"
+              )}`}
+            >
               <MdBugReport
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
               Bug Reports
-            </a>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
 
@@ -108,13 +139,15 @@ export default function Nav() {
         />
         <h3 className="text-base font-bold mb-1 ">James Dylan</h3>
         <p className="text-xs tracking-wider opacity-70">ADMIN</p>
-        <button className="py-3 w-full mt-5 bg-red-500 rounded-sm hover:bg-red-600">
-          <MdOutlineLogout
-            size={18}
-            className=" inline-block align-text-bottom  mr-2"
-          />
-          Logout
-        </button>
+        <Link to="/">
+          <button className="py-3 w-full mt-5 bg-red-500 rounded-sm hover:bg-red-600">
+            <MdOutlineLogout
+              size={18}
+              className=" inline-block align-text-bottom  mr-2"
+            />
+            Logout
+          </button>
+        </Link>
       </div>
     </nav>
   );
