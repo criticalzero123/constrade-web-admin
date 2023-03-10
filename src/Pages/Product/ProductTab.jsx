@@ -20,7 +20,9 @@ const ProductTab = () => {
       {/* List contents  */}
       <div>
         {products &&
-          products.map((_product) => <ProductList product={_product} />)}
+          products.map((_product, index) => (
+            <ProductList product={_product} key={index} />
+          ))}
       </div>
     </section>
   );
