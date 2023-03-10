@@ -32,7 +32,10 @@ import {
   doneFeedbackReducer,
 } from "./reducer/systemReducer";
 
-import { getAllWalletReducer } from "./reducer/walletReducer";
+import {
+  getAllWalletReducer,
+  getWalletTransactionReducer,
+} from "./reducer/walletReducer";
 
 const finalReducer = combineReducers({
   getAllUserReducer,
@@ -50,6 +53,7 @@ const finalReducer = combineReducers({
   getAllWalletReducer,
   getCommunityReducer,
   getProductsReducer,
+  getWalletTransactionReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});

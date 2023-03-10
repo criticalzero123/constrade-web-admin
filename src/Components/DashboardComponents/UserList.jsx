@@ -42,6 +42,7 @@ export default function UserList({ user, person, changeStatus }) {
           </div>
         </div>
         <p className="text-sm opacity-80 font-normal">02 Mar, 2023</p>
+        <p>See Subscription History</p>
         <select
           value={userStatus}
           onChange={onChangeStatus}

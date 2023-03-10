@@ -5,7 +5,6 @@ import { useWallet } from "../../hooks/wallet/useWallet";
 
 const Wallet = () => {
   const [wallets] = useWallet();
-  console.log(wallets);
   return (
     <TableComponent title={"Wallet"} description="Wallet Information">
       <div>
