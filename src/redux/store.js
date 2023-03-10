@@ -37,6 +37,8 @@ import {
   getWalletTransactionReducer,
 } from "./reducer/walletReducer";
 
+import { getSubscriptionHistoryReducer } from "./reducer/subscriptionReducer";
+
 const finalReducer = combineReducers({
   getAllUserReducer,
   changeUserStatusReducer,
@@ -54,6 +56,7 @@ const finalReducer = combineReducers({
   getCommunityReducer,
   getProductsReducer,
   getWalletTransactionReducer,
+  getSubscriptionHistoryReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});

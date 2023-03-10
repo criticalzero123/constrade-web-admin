@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export default function UserList({ user, person, changeStatus }) {
@@ -42,7 +43,9 @@ export default function UserList({ user, person, changeStatus }) {
           </div>
         </div>
         <p className="text-sm opacity-80 font-normal">02 Mar, 2023</p>
-        <p>See Subscription History</p>
+        <Link to={`${user.userId}/subscription/history`}>
+          See Subscription History
+        </Link>
         <select
           value={userStatus}
           onChange={onChangeStatus}

@@ -12,6 +12,7 @@ import {
   MdFeedback,
   MdOutlineLogout,
   MdDashboard,
+  MdReport,
 } from "react-icons/md";
 
 import { IoIosWallet } from "react-icons/io";
@@ -105,11 +106,11 @@ export default function Nav() {
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle("report")}`}
             >
-              <MdSupervisorAccount
+              <MdReport
                 size={18}
                 className="inline-block align-text-bottom mr-2"
               />
-              User Reports
+              Reports
             </li>{" "}
           </Link>
           <Link to="/dashboard/feedback">

@@ -12,6 +12,8 @@ import SystemFeedback from "./Pages/SystemFeedback/SystemFeedback";
 import Community from "./Pages/Community/Community";
 import WalletTransaction from "./Pages/Wallet/WalletTransaction";
 import WalletRoute from "./Pages/Wallet/WalletRoute";
+import SubscriptionHistory from "./Pages/Subscription/SubscriptionHistory";
+import AccountRoute from "./Pages/Account/AccountRoute";
 
 function App() {
   return (
@@ -19,7 +21,13 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />}>
         <Route path="" element={<Analytics />} />
         <Route path="product" element={<ProductTab />} />
-        <Route path="account" element={<Account />} />
+        <Route path="account" element={<AccountRoute />}>
+          <Route path="" element={<Account />} />
+          <Route
+            path=":userid/subscription/history"
+            element={<SubscriptionHistory />}
+          />
+        </Route>
         <Route path="wallet" element={<WalletRoute />}>
           <Route path="" element={<Wallet />} />
           <Route path=":walletid/transaction" element={<WalletTransaction />} />
