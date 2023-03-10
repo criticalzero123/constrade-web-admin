@@ -1,9 +1,10 @@
 import React from "react";
-import ProductList from "../../Components/Product/ProductList";
-import { useProduct } from "../../hooks/product/useProduct";
+import WalletList from "../../Components/Wallet/WalletList";
+import { useWallet } from "../../hooks/wallet/useWallet";
 
-const ProductTab = () => {
-  const [products] = useProduct();
+const Wallet = () => {
+  const [wallets] = useWallet();
+  console.log(wallets);
   return (
     <section className=" text-white font-bold bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] rounded-sm grow">
       {/* Header */}
@@ -19,11 +20,10 @@ const ProductTab = () => {
 
       {/* List contents  */}
       <div>
-        {products &&
-          products.map((_product) => <ProductList product={_product} />)}
+        {wallets && wallets.map((_wallet) => <WalletList wallet={_wallet} />)}
       </div>
     </section>
   );
 };
 
-export default ProductTab;
+export default Wallet;

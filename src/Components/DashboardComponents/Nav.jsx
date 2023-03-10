@@ -77,7 +77,7 @@ export default function Nav() {
               Products
             </li>
           </Link>
-          <Link to="/wallet">
+          <Link to="/dashboard/wallet">
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle("wallet")}`}
             >
@@ -88,7 +88,7 @@ export default function Nav() {
               Wallets
             </li>
           </Link>
-          <Link to="/community">
+          <Link to="/dashboard/community">
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
                 "community"
@@ -101,7 +101,18 @@ export default function Nav() {
               Communities
             </li>{" "}
           </Link>
-          <Link to="/user-feedback">
+          <Link to="/dashboard/report">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle("report")}`}
+            >
+              <MdSupervisorAccount
+                size={18}
+                className="inline-block align-text-bottom mr-2"
+              />
+              User Reports
+            </li>{" "}
+          </Link>
+          <Link to="/dashboard/feedback">
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
                 "user-feedback"
@@ -114,7 +125,7 @@ export default function Nav() {
               User feedbacks
             </li>
           </Link>
-          <Link to="/bug-report">
+          <Link to="/dashboard/bug">
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
                 "bug-report"

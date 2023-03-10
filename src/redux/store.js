@@ -6,11 +6,50 @@ import thunk from "redux-thunk";
 import {
   getAllUserReducer,
   changeUserStatusReducer,
+  blockUserReducer,
 } from "./reducer/userReducer";
+
+import {
+  getAllReportReducer,
+  cancelReportReducer,
+} from "./reducer/reportReducer";
+
+import {
+  communityDeleteReducer,
+  communityPostDeleteReducer,
+  communityPostCommentDeleteReducer,
+  getCommunityReducer,
+} from "./reducer/communityReducer";
+
+import {
+  productDeleteReducer,
+  getProductsReducer,
+} from "./reducer/productReducer";
+
+import {
+  getFeedbacksReducer,
+  getBugsReducer,
+  doneFeedbackReducer,
+} from "./reducer/systemReducer";
+
+import { getAllWalletReducer } from "./reducer/walletReducer";
 
 const finalReducer = combineReducers({
   getAllUserReducer,
   changeUserStatusReducer,
+  getAllReportReducer,
+  communityDeleteReducer,
+  communityPostDeleteReducer,
+  communityPostCommentDeleteReducer,
+  productDeleteReducer,
+  blockUserReducer,
+  cancelReportReducer,
+  getFeedbacksReducer,
+  getBugsReducer,
+  doneFeedbackReducer,
+  getAllWalletReducer,
+  getCommunityReducer,
+  getProductsReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});

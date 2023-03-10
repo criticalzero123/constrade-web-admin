@@ -5,6 +5,8 @@ export default function UserList({ user, person, changeStatus }) {
   const [userStatus, setUserStatus] = useState(user && user.userStatus);
 
   const onChangeStatus = (e) => {
+    const value = e.target.value;
+
     Swal.fire({
       title: "Are you sure??",
       showDenyButton: true,
@@ -13,8 +15,8 @@ export default function UserList({ user, person, changeStatus }) {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        setUserStatus(e.target.value);
-        changeStatus(user.userId, e.target.value);
+        changeStatus(user.userId, value);
+        setUserStatus(value);
       } else if (result.isDenied) {
         Swal.fire("Changes are not saved", "", "info");
       }
@@ -23,7 +25,6 @@ export default function UserList({ user, person, changeStatus }) {
 
   if (user && person) {
     return (
-      // TODO: Should be dynamic. Modify using props
       <div className="flex justify-between gap-3 place-items-center w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
         <div className="flex gap-2 place-items-center">
           <img

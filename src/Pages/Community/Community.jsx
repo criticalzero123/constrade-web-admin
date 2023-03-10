@@ -1,9 +1,10 @@
 import React from "react";
-import ProductList from "../../Components/Product/ProductList";
-import { useProduct } from "../../hooks/product/useProduct";
+import CommunityList from "../../Components/Community/CommunityList";
+import useCommunity from "../../hooks/community/useCommunity";
 
-const ProductTab = () => {
-  const [products] = useProduct();
+const Community = () => {
+  const [community] = useCommunity();
+
   return (
     <section className=" text-white font-bold bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] rounded-sm grow">
       {/* Header */}
@@ -19,11 +20,13 @@ const ProductTab = () => {
 
       {/* List contents  */}
       <div>
-        {products &&
-          products.map((_product) => <ProductList product={_product} />)}
+        {community &&
+          community.map((_community) => (
+            <CommunityList community={_community} />
+          ))}
       </div>
     </section>
   );
 };
 
-export default ProductTab;
+export default Community;

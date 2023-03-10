@@ -1,24 +1,24 @@
-export const getAllUserReducer = (state = {}, action) => {
+export const getBugsReducer = (state = {}, action) => {
   switch (action.type) {
-    case "GET_ALL_USERS_REQUEST":
+    case "GET_BUGS_REQUEST":
       return {
         ...state,
         loading: true,
       };
 
-    case "GET_ALL_USERS_SUCCESS":
+    case "GET_BUGS_SUCCESS":
       return {
         loading: false,
         data: action.payload,
       };
 
-    case "GET_ALL_USERS_ERROR":
+    case "GET_BUGS_ERROR":
       return {
         loading: false,
         error: action.error,
       };
 
-    case "GET_ALL_USERS_LEAVE":
+    case "GET_BUGS_LEAVE":
       return {};
 
     default:
@@ -26,27 +26,27 @@ export const getAllUserReducer = (state = {}, action) => {
   }
 };
 
-export const blockUserReducer = (state = {}, action) => {
+export const getFeedbacksReducer = (state = {}, action) => {
   switch (action.type) {
-    case "BLOCK_USER_REQUEST":
+    case "GET_FEEDBACKS_REQUEST":
       return {
         ...state,
         loading: true,
       };
 
-    case "BLOCK_USER_SUCCESS":
+    case "GET_FEEDBACKS_SUCCESS":
       return {
         loading: false,
         data: action.payload,
       };
 
-    case "BLOCK_USER_ERROR":
+    case "GET_FEEDBACKS_ERROR":
       return {
         loading: false,
         error: action.error,
       };
 
-    case "BLOCK_USER_LEAVE":
+    case "GET_FEEDBACKS_LEAVE":
       return {};
 
     default:
@@ -54,27 +54,27 @@ export const blockUserReducer = (state = {}, action) => {
   }
 };
 
-export const changeUserStatusReducer = (state = {}, action) => {
+export const doneFeedbackReducer = (state = {}, action) => {
   switch (action.type) {
-    case "CHANGE_USER_STATUS_REQUEST":
+    case "MARK_AS_DONE_REQUEST":
       return {
         ...state,
         loading: true,
       };
 
-    case "CHANGE_USER_STATUS_SUCCESS":
+    case "MARK_AS_DONE_SUCCESS":
       return {
         loading: false,
         data: action.payload,
       };
 
-    case "CHANGE_USER_STATUS_ERROR":
+    case "MARK_AS_DONE_ERROR":
       return {
         loading: false,
         error: action.error,
       };
 
-    case "CHANGE_USER_STATUS_LEAVE":
+    case "MARK_AS_DONE_LEAVE":
       return {};
 
     default:

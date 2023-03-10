@@ -10,6 +10,21 @@ export const getAllUser = () => async (dispatch) => {
   }
 };
 
+export const blockUser = (id, reportId) => async (dispatch) => {
+  dispatch({ type: "BLOCK_USER_REQUEST" });
+  try {
+    const res = await api.put(`/users/${id}/block?reportId=${reportId}`);
+    dispatch({ type: "BLOCK_USER_SUCCESS", payload: res.data.responseData });
+    if (res.data.responseData) {
+      alert("User Ban");
+    } else {
+      alert("User did not Ban");
+    }
+  } catch (error) {
+    dispatch({ type: "BLOCK_USER_ERROR", error: error });
+  }
+};
+
 export const changeUserStatus = (info) => async (dispatch) => {
   dispatch({ type: "CHANGE_USER_STATUS_REQUEST" });
   try {

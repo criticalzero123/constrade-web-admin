@@ -1,0 +1,18 @@
+import React from "react";
+
+const CommunityList = ({ community }) => {
+  return (
+    <div className="flex justify-between gap-3 place-items-center w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
+      <p>{community.name}</p>
+      <p>{community.description}</p>
+
+      <p className="text-sm opacity-80 font-normal">
+        {new Date(community.dateCreated).toLocaleDateString()}
+      </p>
+      <p>{community.visibility}</p>
+      <p>{community.totalMembers}</p>
+    </div>
+  );
+};
+
+export default CommunityList;

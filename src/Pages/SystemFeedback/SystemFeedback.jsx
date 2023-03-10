@@ -1,9 +1,10 @@
 import React from "react";
-import ProductList from "../../Components/Product/ProductList";
-import { useProduct } from "../../hooks/product/useProduct";
+import FeedbackList from "../../Components/SystemFeedback/FeedbackList";
+import { useFeedback } from "../../hooks/system/useFeedback";
 
-const ProductTab = () => {
-  const [products] = useProduct();
+const SystemFeedback = () => {
+  const [feedback] = useFeedback();
+
   return (
     <section className=" text-white font-bold bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] rounded-sm grow">
       {/* Header */}
@@ -19,11 +20,13 @@ const ProductTab = () => {
 
       {/* List contents  */}
       <div>
-        {products &&
-          products.map((_product) => <ProductList product={_product} />)}
+        {feedback &&
+          feedback.map((_feedback, index) => (
+            <FeedbackList data={_feedback} key={index} />
+          ))}
       </div>
     </section>
   );
 };
 
-export default ProductTab;
+export default SystemFeedback;
