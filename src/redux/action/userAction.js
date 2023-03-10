@@ -37,3 +37,22 @@ export const changeUserStatus = (info) => async (dispatch) => {
     dispatch({ type: "CHANGE_USER_STATUS_ERROR", error: error });
   }
 };
+
+export const alertUser = (id) => async (dispatch) => {
+  dispatch({ type: "ALERT_USER_REQUEST" });
+  try {
+    const res = await api.post(`/notification/alert/${id}`);
+    dispatch({
+      type: "ALERT_USER_SUCCESS",
+      payload: res.data.responseData,
+    });
+
+    if (res.data.responseData) {
+      alert("reported");
+    } else {
+      alert("something went wrong");
+    }
+  } catch (error) {
+    dispatch({ type: "ALERT_USER_ERROR", error: error });
+  }
+};

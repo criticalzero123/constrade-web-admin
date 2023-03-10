@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { productDelete } from "../../redux/action/productAction";
-import { blockUser } from "../../redux/action/userAction";
+import { alertUser, blockUser } from "../../redux/action/userAction";
 import { reportType } from "../../utility/enums";
 import {
   communityDelete,
@@ -108,6 +108,14 @@ const ReportList = ({ report, user, person }) => {
       >
         cancel
       </p>
+      {report.reportType === reportType.User && (
+        <p
+          className="cursor-pointer text-red-500"
+          onClick={() => dispatch(alertUser(report.idReported))}
+        >
+          alert
+        </p>
+      )}
     </div>
   );
 };
