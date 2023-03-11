@@ -19,6 +19,8 @@ import {
   communityPostDeleteReducer,
   communityPostCommentDeleteReducer,
   getCommunityReducer,
+  getCommunityPostCommentReducer,
+  getCommunityPostReducer,
 } from "./reducer/communityReducer";
 
 import {
@@ -57,6 +59,8 @@ const finalReducer = combineReducers({
   getProductsReducer,
   getWalletTransactionReducer,
   getSubscriptionHistoryReducer,
+  getCommunityPostCommentReducer,
+  getCommunityPostReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});

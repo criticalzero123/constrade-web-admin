@@ -14,6 +14,9 @@ import WalletTransaction from "./Pages/Wallet/WalletTransaction";
 import WalletRoute from "./Pages/Wallet/WalletRoute";
 import SubscriptionHistory from "./Pages/Subscription/SubscriptionHistory";
 import AccountRoute from "./Pages/Account/AccountRoute";
+import CommunityRoute from "./Pages/Community/CommunityRoute";
+import CommunityPost from "./Pages/Community/Posts/CommunityPost";
+import CommunityComments from "./Pages/Community/Posts/comments/CommunityComments";
 
 function App() {
   return (
@@ -35,7 +38,14 @@ function App() {
         <Route path="report" element={<Report />} />
         <Route path="bug" element={<SystemBug />} />
         <Route path="feedback" element={<SystemFeedback />} />
-        <Route path="community" element={<Community />} />
+        <Route path="community" element={<CommunityRoute />}>
+          <Route path="" element={<Community />} />
+          <Route path=":postid/posts" element={<CommunityPost />} />
+          <Route
+            path=":postid/posts/:commentid/comments"
+            element={<CommunityComments />}
+          />
+        </Route>
       </Route>
       <Route path="/signin" element={<SignIn />} />
       <Route path="/" element={<SignIn />} />

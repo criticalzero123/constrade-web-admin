@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CommunityList = ({ community }) => {
   return (
@@ -11,6 +12,7 @@ const CommunityList = ({ community }) => {
       </p>
       <p>{community.visibility}</p>
       <p>{community.totalMembers}</p>
+      <Link to={`${community.communityId}/posts`}>See posts</Link>
     </div>
   );
 };

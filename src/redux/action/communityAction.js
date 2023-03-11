@@ -76,3 +76,31 @@ export const getCommunity = () => async (dispatch) => {
     dispatch({ type: "GET_COMMUNITY_ERROR", error: error });
   }
 };
+
+export const getCommunityPost = (id) => async (dispatch) => {
+  dispatch({ type: "GET_COMMUNITY_POST_REQUEST" });
+  try {
+    const res = await api.get(`/community/post/${id}`);
+
+    dispatch({
+      type: "GET_COMMUNITY_POST_SUCCESS",
+      payload: res.data.responseData,
+    });
+  } catch (error) {
+    dispatch({ type: "GET_COMMUNITY_POST_ERROR", error: error });
+  }
+};
+
+export const getCommunityPostComment = (id) => async (dispatch) => {
+  dispatch({ type: "GET_COMMUNITY_POST_COMMENT_REQUEST" });
+  try {
+    const res = await api.get(`/community/post/comment/${id}`);
+
+    dispatch({
+      type: "GET_COMMUNITY_POST_COMMENT_SUCCESS",
+      payload: res.data.responseData,
+    });
+  } catch (error) {
+    dispatch({ type: "GET_COMMUNITY_POST_COMMENT_ERROR", error: error });
+  }
+};
