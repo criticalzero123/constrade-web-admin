@@ -77,6 +77,20 @@ export default function Nav() {
               Products
             </li>
           </Link>
+          <Link to="/dashboard/transactionHistory">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "transactionHistory"
+              )}`}
+            >
+              <MdShoppingCart
+                size={18}
+                className="inline-block align-text-bottom mr-2"
+              />
+              Transaction History
+            </li>
+          </Link>
+
           <Link to="/wallet">
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle("wallet")}`}

@@ -64,6 +64,15 @@ export default function SideNav() {
               <p className="inline-block">Products</p>
             </li>
           </Link>
+          <Link to="/dashboard/transactionHistory">
+            <li className="py-3 px-2 mb-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] opacity-60 hover:cursor-pointer">
+              <MdShoppingCart
+                size={20}
+                className="inline-block align-text-bottom mr-2"
+              />
+              <p className="inline-block">Transaction History</p>
+            </li>
+          </Link>
           <li className="py-3 px-2 mb-2 rounded-sm hover:bg-[rgba(255,255,255,0.08)] opacity-60 hover:cursor-pointer">
             <IoIosWallet
               size={20}
