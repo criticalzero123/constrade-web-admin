@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AiFillStar } from "react-icons/ai";
 
-export default function UserList({ user, person, changeStatus }) {
+export default function UserList({ user, person, rate, changeStatus }) {
   const [userStatus, setUserStatus] = useState(user && user.userStatus);
 
   const onChangeStatus = (e) => {
@@ -42,7 +43,12 @@ export default function UserList({ user, person, changeStatus }) {
             </p>
           </div>
         </div>
-        <p className="text-sm opacity-80 font-normal">02 Mar, 2023</p>
+        <Link className="flex items-center gap-2" to={`${user.userId}/reviews`}>
+          {rate} <AiFillStar color="yellow" />
+        </Link>
+        <p className="text-sm opacity-80 font-normal">
+          {new Date(user.dateCreated).toLocaleDateString()}
+        </p>
         <Link to={`${user.userId}/subscription/history`}>
           See Subscription History
         </Link>

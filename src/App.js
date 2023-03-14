@@ -17,6 +17,7 @@ import AccountRoute from "./Pages/Account/AccountRoute";
 import CommunityRoute from "./Pages/Community/CommunityRoute";
 import CommunityPost from "./Pages/Community/Posts/CommunityPost";
 import CommunityComments from "./Pages/Community/Posts/comments/CommunityComments";
+import ReviewPage from "./Pages/Review/ReviewPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             path=":userid/subscription/history"
             element={<SubscriptionHistory />}
           />
+          <Route path=":userid/reviews" element={<ReviewPage />} />
         </Route>
         <Route path="wallet" element={<WalletRoute />}>
           <Route path="" element={<Wallet />} />

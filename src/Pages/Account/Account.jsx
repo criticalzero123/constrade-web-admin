@@ -25,6 +25,7 @@ const Account = () => {
             <UserList
               user={_user.user}
               person={_user.person}
+              rate={_user.rate}
               key={index}
               changeStatus={changeStatus}
             />
