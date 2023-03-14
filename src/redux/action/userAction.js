@@ -56,3 +56,16 @@ export const alertUser = (id) => async (dispatch) => {
     dispatch({ type: "ALERT_USER_ERROR", error: error });
   }
 };
+
+export const getReviews = (id) => async (dispatch) => {
+  dispatch({ type: "GET_REVIEWS_REQUEST" });
+  try {
+    const res = await api.get(`/users/${id}/reviews`);
+    dispatch({
+      type: "GET_REVIEWS_SUCCESS",
+      payload: res.data.responseData,
+    });
+  } catch (error) {
+    dispatch({ type: "GET_REVIEWS_ERROR", error: error });
+  }
+};

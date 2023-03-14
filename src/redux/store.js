@@ -7,6 +7,7 @@ import {
   getAllUserReducer,
   changeUserStatusReducer,
   blockUserReducer,
+  getReviewsReducer,
 } from "./reducer/userReducer";
 
 import {
@@ -61,6 +62,7 @@ const finalReducer = combineReducers({
   getSubscriptionHistoryReducer,
   getCommunityPostCommentReducer,
   getCommunityPostReducer,
+  getReviewsReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});
