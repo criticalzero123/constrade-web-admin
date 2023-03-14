@@ -53,3 +53,31 @@ export const getProductsReducer = (state = {}, action) => {
       return { ...state };
   }
 };
+
+export const getTransactionProductReducer = (state = {}, action) => {
+  switch (action.type) {
+    case "GET_TRANSACTIO_PRODUCT_REQUEST":
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case "GET_TRANSACTIO_PRODUCT_SUCCESS":
+      return {
+        loading: false,
+        data: action.payload,
+      };
+
+    case "GET_TRANSACTIO_PRODUCT_ERROR":
+      return {
+        loading: false,
+        error: action.error,
+      };
+
+    case "GET_TRANSACTIO_PRODUCT_LEAVE":
+      return {};
+
+    default:
+      return { ...state };
+  }
+};

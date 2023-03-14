@@ -18,13 +18,20 @@ import CommunityRoute from "./Pages/Community/CommunityRoute";
 import CommunityPost from "./Pages/Community/Posts/CommunityPost";
 import CommunityComments from "./Pages/Community/Posts/comments/CommunityComments";
 import ReviewPage from "./Pages/Review/ReviewPage";
+import ProductTransaction from "./Pages/Transaction/ProductTransaction";
 
 function App() {
   return (
     <Routes>
       <Route path="/dashboard" element={<Dashboard />}>
         <Route path="" element={<Analytics />} />
+
         <Route path="product" element={<ProductTab />} />
+        <Route
+          path="product/:productid/transaction"
+          element={<ProductTransaction />}
+        />
+
         <Route path="account" element={<AccountRoute />}>
           <Route path="" element={<Account />} />
           <Route

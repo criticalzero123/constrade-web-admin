@@ -27,6 +27,7 @@ import {
 import {
   productDeleteReducer,
   getProductsReducer,
+  getTransactionProductReducer,
 } from "./reducer/productReducer";
 
 import {
@@ -63,6 +64,7 @@ const finalReducer = combineReducers({
   getCommunityPostCommentReducer,
   getCommunityPostReducer,
   getReviewsReducer,
+  getTransactionProductReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});

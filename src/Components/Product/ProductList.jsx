@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductList = ({ product }) => {
   return (
@@ -21,6 +22,9 @@ const ProductList = ({ product }) => {
       <p className="text-sm opacity-80 font-normal">
         {new Date(product.dateCreated).toLocaleDateString()}
       </p>
+      {product.productStatus === "sold" && (
+        <Link to={`${product.productId}/transaction`}>See Transaction</Link>
+      )}
       <p>{product.productStatus}</p>
     </div>
   );
