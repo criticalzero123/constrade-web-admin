@@ -43,6 +43,8 @@ import {
 
 import { getSubscriptionHistoryReducer } from "./reducer/subscriptionReducer";
 
+import { getAllVerificationRequestReducer } from "./reducer/verificationReducer";
+
 const finalReducer = combineReducers({
   getAllUserReducer,
   changeUserStatusReducer,
@@ -65,6 +67,7 @@ const finalReducer = combineReducers({
   getCommunityPostReducer,
   getReviewsReducer,
   getTransactionProductReducer,
+  getAllVerificationRequestReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});

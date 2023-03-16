@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import CommunityList from "../../../Components/Community/CommunityList";
 import CommunityPostsList from "../../../Components/Community/Posts/CommunityPostList";
 import TableComponent from "../../../Components/TableComponent";
 import useCommunityPost from "../../../hooks/community/useCommunityPost";

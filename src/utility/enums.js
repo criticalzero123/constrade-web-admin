@@ -5,3 +5,5 @@ export const reportType = {
   CommunityPost: 3,
   CommunityPostComment: 4,
 };
+
+export const ValidIdType = ["Passport", "NBI", "Police Clearance"];

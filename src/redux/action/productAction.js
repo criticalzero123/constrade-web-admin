@@ -29,15 +29,15 @@ export const getProducts = () => async (dispatch) => {
 };
 
 export const getTransactionProduct = (id) => async (dispatch) => {
-  dispatch({ type: "GET_TRANSACTIO_PRODUCT_REQUEST" });
+  dispatch({ type: "GET_TRANSACTION_PRODUCT_REQUEST" });
   try {
     const res = await api.get(`/product/${id}/transaction`);
 
     dispatch({
-      type: "GET_TRANSACTIO_PRODUCT_SUCCESS",
+      type: "GET_TRANSACTION_PRODUCT_SUCCESS",
       payload: res.data.responseData,
     });
   } catch (error) {
-    dispatch({ type: "GET_TRANSACTIO_PRODUCT_ERROR", error: error });
+    dispatch({ type: "GET_TRANSACTION_PRODUCT_ERROR", error: error });
   }
 };

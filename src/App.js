@@ -19,6 +19,7 @@ import CommunityPost from "./Pages/Community/Posts/CommunityPost";
 import CommunityComments from "./Pages/Community/Posts/comments/CommunityComments";
 import ReviewPage from "./Pages/Review/ReviewPage";
 import ProductTransaction from "./Pages/Transaction/ProductTransaction";
+import Verification from "./Pages/Verification/Verification";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="report" element={<Report />} />
         <Route path="bug" element={<SystemBug />} />
         <Route path="feedback" element={<SystemFeedback />} />
+        <Route path="verification" element={<Verification />} />
         <Route path="community" element={<CommunityRoute />}>
           <Route path="" element={<Community />} />
           <Route path=":postid/posts" element={<CommunityPost />} />
