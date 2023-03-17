@@ -28,6 +28,7 @@ import {
   productDeleteReducer,
   getProductsReducer,
   getTransactionProductReducer,
+  getBoostedProductReducer,
 } from "./reducer/productReducer";
 
 import {
@@ -68,6 +69,7 @@ const finalReducer = combineReducers({
   getReviewsReducer,
   getTransactionProductReducer,
   getAllVerificationRequestReducer,
+  getBoostedProductReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});

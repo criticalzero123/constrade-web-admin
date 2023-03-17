@@ -81,3 +81,31 @@ export const getTransactionProductReducer = (state = {}, action) => {
       return { ...state };
   }
 };
+
+export const getBoostedProductReducer = (state = {}, action) => {
+  switch (action.type) {
+    case "GET_BOOSTED_PRODUCT_REQUEST":
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case "GET_BOOSTED_PRODUCT_SUCCESS":
+      return {
+        loading: false,
+        data: action.payload,
+      };
+
+    case "GET_BOOSTED_PRODUCT_ERROR":
+      return {
+        loading: false,
+        error: action.error,
+      };
+
+    case "GET_BOOSTED_PRODUCT_LEAVE":
+      return {};
+
+    default:
+      return { ...state };
+  }
+};

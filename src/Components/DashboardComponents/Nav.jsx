@@ -79,6 +79,19 @@ export default function Nav() {
               Products
             </li>
           </Link>
+          <Link to="/dashboard/boosted">
+            <li
+              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
+                "boosted"
+              )}`}
+            >
+              <MdShoppingCart
+                size={18}
+                className="inline-block align-text-bottom mr-2"
+              />
+              Boosted Product
+            </li>
+          </Link>
           <Link to="/dashboard/verification">
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(

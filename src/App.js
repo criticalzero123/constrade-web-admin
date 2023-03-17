@@ -20,6 +20,7 @@ import CommunityComments from "./Pages/Community/Posts/comments/CommunityComment
 import ReviewPage from "./Pages/Review/ReviewPage";
 import ProductTransaction from "./Pages/Transaction/ProductTransaction";
 import Verification from "./Pages/Verification/Verification";
+import BoostedPage from "./Pages/boosted/BoostedPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="" element={<Analytics />} />
 
         <Route path="product" element={<ProductTab />} />
+        <Route path="boosted" element={<BoostedPage />} />
         <Route
           path="product/:productid/transaction"
           element={<ProductTransaction />}
