@@ -6,7 +6,6 @@ import { useBoostProduct } from "../../hooks/boosted/useBoostProduct";
 const BoostedPage = () => {
   const [products, onCancel] = useBoostProduct();
 
-  console.log(products);
   return (
     <TableComponent
       title={"Boosted Product"}
