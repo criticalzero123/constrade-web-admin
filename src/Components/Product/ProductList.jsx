@@ -22,10 +22,14 @@ const ProductList = ({ product }) => {
       <p className="text-sm opacity-80 font-normal">
         {new Date(product.dateCreated).toLocaleDateString()}
       </p>
-      {product.productStatus === "sold" && (
-        <Link to={`${product.productId}/transaction`}>See Transaction</Link>
+
+      {product.productStatus === "sold" ? (
+        <Link className="text-red-500" to={`${product.productId}/transaction`}>
+          {product.productStatus}
+        </Link>
+      ) : (
+        <p>{product.productStatus}</p>
       )}
-      <p>{product.productStatus}</p>
     </div>
   );
 };

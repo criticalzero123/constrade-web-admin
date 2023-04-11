@@ -15,7 +15,7 @@ const WalletTransactionList = ({ data, walletId }) => {
           ? "sends money"
           : "receive money"}
       </p>
-      <p>{new Date(data.dateSend).toLocaleDateString()}</p>
+      <p>{new Date(data.date).toLocaleDateString()}</p>
     </div>
   );
 };

@@ -13,8 +13,12 @@ const BoostedPage = () => {
     >
       <div>
         {products &&
-          products.map((_product, index) => (
-            <BoostedList product={_product} key={index} onCancel={onCancel} />
+          (products.length === 0 ? (
+            <p>No boosted Items</p>
+          ) : (
+            products.map((_product, index) => (
+              <BoostedList product={_product} key={index} onCancel={onCancel} />
+            ))
           ))}
       </div>
     </TableComponent>

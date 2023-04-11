@@ -4,7 +4,6 @@ import { useSystemBug } from "../../hooks/system/useSystemBug";
 
 const SystemBug = () => {
   const [bugs] = useSystemBug();
-  console.log(bugs);
 
   return (
     <section className=" text-white font-bold bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] rounded-sm grow">

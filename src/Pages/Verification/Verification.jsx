@@ -13,8 +13,12 @@ const Verification = () => {
     >
       <div>
         {requests &&
-          requests.map((_request, index) => (
-            <VerificationList request={_request} key={index} />
+          (requests.length === 0 ? (
+            <p>No Requests</p>
+          ) : (
+            requests.map((_request, index) => (
+              <VerificationList request={_request} key={index} />
+            ))
           ))}
       </div>
     </TableComponent>
