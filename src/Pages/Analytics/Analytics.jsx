@@ -6,11 +6,12 @@ import {
   MdPeopleAlt,
   MdVerifiedUser,
 } from "react-icons/md";
-import DashboardCards from "../../Components/DashboardComponents/DashboardCards";
+import UserStatistic from "../../Components/DashboardComponents/UserStatistic";
 import useGetCount from "../../hooks/dashboard/useGetCount";
+import ProductStatistic from "../../Components/DashboardComponents/ProductStatistic";
 export default function Analytics() {
   const [data] = useGetCount();
-  console.log(data);
+  if (data === undefined) return;
   return (
     <>
       <section>
@@ -47,22 +48,19 @@ export default function Analytics() {
           </article>
         </div>
       </section>
-      <DashboardCards
-        title={"Community Report"}
-        description={"See community report"}
-        path={"community"}
-      />
       {/* Status cards */}
       <section className="flex gap-3">
-        <DashboardCards
-          title={"Product Report"}
-          description={"See product report"}
-          path={"product"}
-        />
-        <DashboardCards
-          title={"User Report"}
-          description={"See user report"}
+        <UserStatistic
+          title={"User"}
+          description={"See user analytics"}
           path={"account"}
+          statistic={data.userStatistics}
+        />
+        <ProductStatistic
+          title={"Product"}
+          description={"See product analytics"}
+          path={"product"}
+          statistic={data.productStatistics}
         />
       </section>
     </>
