@@ -69,3 +69,13 @@ export const cancelBoostProduct = async (id) => {
     console.error(error);
   }
 };
+
+export const addProductprices = async (info) => {
+  try {
+    const res = await api.post("/product/prices/add", info);
+
+    return res.data.responseData;
+  } catch (error) {
+    console.log(error);
+  }
+};

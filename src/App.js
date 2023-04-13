@@ -22,6 +22,7 @@ import ProductTransaction from "./Pages/Transaction/ProductTransaction";
 import Verification from "./Pages/Verification/Verification";
 import BoostedPage from "./Pages/boosted/BoostedPage";
 import SignUp from "./Pages/sign-up/SignUp";
+import ProductAddPrices from "./Pages/Product/ProductAddPrices";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path=":walletid/transaction" element={<WalletTransaction />} />
         </Route>
         <Route path="report" element={<Report />} />
+        <Route path="product/add/prices" element={<ProductAddPrices />} />
         <Route path="bug" element={<SystemBug />} />
         <Route path="feedback" element={<SystemFeedback />} />
         <Route path="verification" element={<Verification />} />

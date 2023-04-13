@@ -13,6 +13,11 @@ const SignIn = () => {
     const res = await loginAdmin(username, password);
 
     if (res) {
+      localStorage.setItem(
+        "account",
+        JSON.stringify({ id: res.adminAccountId, username: res.username })
+      );
+
       window.location.href = "/dashboard";
     } else {
       alert("Invalid credentials!");

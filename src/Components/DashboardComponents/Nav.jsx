@@ -31,6 +31,11 @@ export default function Nav() {
       : "hover:bg-[rgba(255,255,255,0.10)] opacity-70";
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("account");
+    window.location.href = "/";
+  };
+
   return (
     <nav className="bg-[rgba(255,255,255,0.20)] text-white h-screen p-4 flex justify-around flex-col text-sm overflow-auto">
       <div className="mt-24 mb-5  justify-center flex">
@@ -178,15 +183,17 @@ export default function Nav() {
         />
         <h3 className="text-base font-bold mb-1 ">James Dylan</h3>
         <p className="text-xs tracking-wider opacity-70">ADMIN</p>
-        <Link to="/">
-          <button className="py-3 w-full mt-5 bg-red-500 rounded-sm hover:bg-red-600">
-            <MdOutlineLogout
-              size={18}
-              className=" inline-block align-text-bottom  mr-2"
-            />
-            Logout
-          </button>
-        </Link>
+
+        <button
+          className="py-3 w-full mt-5 bg-red-500 rounded-sm hover:bg-red-600"
+          onClick={handleLogout}
+        >
+          <MdOutlineLogout
+            size={18}
+            className=" inline-block align-text-bottom  mr-2"
+          />
+          Logout
+        </button>
       </div>
     </nav>
   );

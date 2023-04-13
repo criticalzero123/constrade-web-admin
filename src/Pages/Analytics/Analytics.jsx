@@ -16,7 +16,7 @@ export default function Analytics() {
     <>
       <section>
         {/* Product, Users, Transactions, User reports, Feedbacks, Bugs */}
-        <div className="cards flex mt-2 gap-8">
+        <div className="cards grid grid-cols-2 mt-2 gap-3 mb-5">
           <article className="text-white bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] pt-5 px-4 rounded-sm grow">
             <h3 className="opacity-70 ">Total users</h3>
             <p className=" text-3xl mt-3 tracking-wider font-bold">
@@ -49,7 +49,7 @@ export default function Analytics() {
         </div>
       </section>
       {/* Status cards */}
-      <section className="flex gap-3">
+      <section className="grid grid-cols-2 gap-3">
         <UserStatistic
           title={"User"}
           description={"See user analytics"}
