@@ -21,6 +21,7 @@ import ReviewPage from "./Pages/Review/ReviewPage";
 import ProductTransaction from "./Pages/Transaction/ProductTransaction";
 import Verification from "./Pages/Verification/Verification";
 import BoostedPage from "./Pages/boosted/BoostedPage";
+import SignUp from "./Pages/sign-up/SignUp";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         </Route>
       </Route>
       <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
       <Route path="/" element={<SignIn />} />
     </Routes>
   );

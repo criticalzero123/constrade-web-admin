@@ -2,26 +2,21 @@ import React, { useState } from "react";
 
 // Import image asset
 import appLogo from "../../Assets/App-Dark.svg";
-import { loginAdmin } from "../../redux/action/authAction";
+import { registerAdmin } from "../../redux/action/authAction";
 
-const SignIn = () => {
+const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = async (e) => {
-    e.preventDefault();
+  const [key, setKey] = useState("");
 
-    const res = await loginAdmin(username, password);
-
-    if (res) {
-      window.location.href = "/dashboard";
-    } else {
-      alert("Invalid credentials!");
-    }
-  };
   return (
     <form
       className="bg-black h-screen flex justify-center items-center"
-      onSubmit={handleLogin}
+      onSubmit={(e) => {
+        e.preventDefault();
+
+        registerAdmin(username, password, key);
+      }}
     >
       <div className="wrapper h-2/3 w-80 flex flex-col mb-20">
         <div>
@@ -31,7 +26,7 @@ const SignIn = () => {
             alt="Constrade Logo"
           />
           <h1 className=" text-white font-bold text-2xl text-center mb-8 opacity-90 ">
-            ADMIN LOGIN
+            ADMIN REGISTER
           </h1>
         </div>
         <div className=" text-left">
@@ -56,15 +51,21 @@ const SignIn = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-        </div>
-        {/* Login Button */}
 
-        <button className="bg-[#e6592e] hover:bg-[#ae4221] py-4 w-full rounded-sm font-bold text-[#FCFBFA] text-base tracking-wide text-center">
-          LOGIN
+          <h3 className=" text-white pb-3 text-base opacity-90">Key</h3>
+          <input
+            className="mb-8 px-3 py-3 w-full rounded-sm "
+            value={key}
+            onChange={(e) => setKey(e.target.value)}
+          />
+        </div>
+
+        <button className="bg-[#e6592e] hover:bg-[#ae4221] py-4 w-full rounded-sm font-bold text-[#FCFBFA] text-base tracking-wide text-center cursor-pointer">
+          REGISTER
         </button>
       </div>
     </form>
   );
 };
 
-export default SignIn;
+export default SignUp;
