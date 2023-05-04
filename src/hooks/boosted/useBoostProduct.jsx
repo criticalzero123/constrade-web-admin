@@ -12,8 +12,19 @@ export const useBoostProduct = () => {
     dispatch(getBoostedProduct());
   }, [dispatch]);
 
-  const cancelBoost = (id) => {
-    cancelBoostProduct(id);
+  const cancelBoost = async (id) => {
+    const res = await cancelBoostProduct(id);
+
+    if (res) {
+      const newData = data.filter((p) => p.boostProductId !== id);
+      dispatch({
+        type: "GET_BOOSTED_PRODUCT_SUCCESS",
+        payload: newData,
+      });
+      alert("Cancel successfully");
+    } else {
+      alert("Something went wrong in cancelling the boost product.");
+    }
   };
 
   return [data, cancelBoost];

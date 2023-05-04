@@ -60,11 +60,7 @@ export const cancelBoostProduct = async (id) => {
   try {
     const res = await api.put(`/product/boosted/${id}/cancel`);
 
-    if (res.data.responseData) {
-      alert("Cancelled");
-    } else {
-      alert("Error in cancelling");
-    }
+    return res.data.responseData;
   } catch (error) {
     console.error(error);
   }

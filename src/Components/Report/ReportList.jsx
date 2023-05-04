@@ -77,11 +77,12 @@ const ReportList = ({ report, user, person }) => {
           </p>
         </div>
       </div>
-      <div>
-        <p>Id Reported: {report.idReported}</p>
-      </div>
+
       <div>
         <p>{reportTypeToString(report.reportType)}</p>
+      </div>
+      <div>
+        <p>Id Reported: {report.idReported}</p>
       </div>
       <div>
         <p>{report.description}</p>

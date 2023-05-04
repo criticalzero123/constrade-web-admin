@@ -17,11 +17,7 @@ export const acceptRequest = async (id, userId) => {
   try {
     const res = await api.put(`/verification/${id}/accept?userId=${userId}`);
 
-    if (res.data.responseData) {
-      alert("Accepted");
-    } else {
-      alert("Something Went wrong in database");
-    }
+    return res.data.responseData;
   } catch (error) {
     console.error(error);
   }

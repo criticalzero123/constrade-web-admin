@@ -4,7 +4,7 @@ import VerificationList from "../../Components/verification/VerificationList";
 import { useVerification } from "../../hooks/verification/useVerification";
 
 const Verification = () => {
-  const [requests] = useVerification();
+  const [requests, onAccept, declined] = useVerification();
 
   return (
     <TableComponent
@@ -17,7 +17,12 @@ const Verification = () => {
             <p>No Requests</p>
           ) : (
             requests.map((_request, index) => (
-              <VerificationList request={_request} key={index} />
+              <VerificationList
+                request={_request}
+                key={index}
+                onAccept={onAccept}
+                rejectRequest={declined}
+              />
             ))
           ))}
       </div>
