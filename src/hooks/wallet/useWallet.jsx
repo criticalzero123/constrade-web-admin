@@ -1,14 +1,16 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import { getAllWallet } from "../../redux/action/walletAction";
 
 export const useWallet = () => {
-  const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.getAllWalletReducer);
+  const [data, setData] = useState();
 
   useEffect(() => {
-    dispatch(getAllWallet());
-  }, [dispatch]);
+    const fetch = async () => {
+      const res = await getAllWallet();
+      setData(res);
+    };
+    fetch();
+  }, []);
 
   return [data];
 };

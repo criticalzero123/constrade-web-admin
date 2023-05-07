@@ -1,15 +1,11 @@
 import api from "../../utility/api";
 
-export const getAllWallet = () => async (dispatch) => {
-  dispatch({ type: "GET_ALL_WALLET_REQUEST" });
+export const getAllWallet = async () => {
   try {
     const res = await api.get("/wallet");
-    dispatch({
-      type: "GET_ALL_WALLET_SUCCESS",
-      payload: res.data.responseData,
-    });
+    return res.data.responseData;
   } catch (error) {
-    dispatch({ type: "GET_ALL_WALLET_ERROR", error: error });
+    console.log(error);
   }
 };
 

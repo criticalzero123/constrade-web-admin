@@ -43,7 +43,10 @@ export default function UserList({ user, person, rate, changeStatus }) {
             </p>
           </div>
         </div>
-        <Link className="flex items-center gap-2" to={`${user.userId}/reviews`}>
+        <Link
+          className="flex items-center gap-2 justify-center"
+          to={`${user.userId}/reviews`}
+        >
           {rate} <AiFillStar color="yellow" />
         </Link>
         <p className="text-sm opacity-80 font-normal">
