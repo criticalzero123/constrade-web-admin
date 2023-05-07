@@ -5,7 +5,6 @@ import thunk from "redux-thunk";
 
 import {
   getAllUserReducer,
-  changeUserStatusReducer,
   blockUserReducer,
   getReviewsReducer,
 } from "./reducer/userReducer";
@@ -48,7 +47,6 @@ import { getAllVerificationRequestReducer } from "./reducer/verificationReducer"
 
 const finalReducer = combineReducers({
   getAllUserReducer,
-  changeUserStatusReducer,
   getAllReportReducer,
   communityDeleteReducer,
   communityPostDeleteReducer,

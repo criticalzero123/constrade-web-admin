@@ -25,16 +25,12 @@ export const blockUser = (id, reportId) => async (dispatch) => {
   }
 };
 
-export const changeUserStatus = (info) => async (dispatch) => {
-  dispatch({ type: "CHANGE_USER_STATUS_REQUEST" });
+export const changeUserStatus = async (info) => {
   try {
     const res = await api.put(`/users/status`, info);
-    dispatch({
-      type: "CHANGE_USER_STATUS_SUCCESS",
-      payload: res.data.responseData,
-    });
+    return res.data.responseData;
   } catch (error) {
-    dispatch({ type: "CHANGE_USER_STATUS_ERROR", error: error });
+    console.log(error);
   }
 };
 

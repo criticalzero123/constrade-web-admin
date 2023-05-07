@@ -54,34 +54,6 @@ export const blockUserReducer = (state = {}, action) => {
   }
 };
 
-export const changeUserStatusReducer = (state = {}, action) => {
-  switch (action.type) {
-    case "CHANGE_USER_STATUS_REQUEST":
-      return {
-        ...state,
-        loading: true,
-      };
-
-    case "CHANGE_USER_STATUS_SUCCESS":
-      return {
-        loading: false,
-        data: action.payload,
-      };
-
-    case "CHANGE_USER_STATUS_ERROR":
-      return {
-        loading: false,
-        error: action.error,
-      };
-
-    case "CHANGE_USER_STATUS_LEAVE":
-      return {};
-
-    default:
-      return { ...state };
-  }
-};
-
 export const getReviewsReducer = (state = {}, action) => {
   switch (action.type) {
     case "GET_REVIEWS_REQUEST":

@@ -5,23 +5,19 @@ import { changeUserStatus, getAllUser } from "../../redux/action/userAction";
 export const useUsers = () => {
   const dispatch = useDispatch();
   const { data: users } = useSelector((state) => state.getAllUserReducer);
-  const { data: changeSuccess, loading } = useSelector(
-    (state) => state.changeUserStatusReducer
-  );
 
   useEffect(() => {
     dispatch(getAllUser());
   }, [dispatch]);
 
-  useEffect(() => {
-    if (changeSuccess === undefined || loading || loading === undefined) return;
+  const changeStatus = async (userId, newStatus) => {
+    const res = await changeUserStatus({ userId, newStatus });
 
-    if (changeSuccess) alert("Change successfully");
-    else alert("Failed to change!");
-  }, [changeSuccess, loading]);
-
-  const changeStatus = (userId, newStatus) => {
-    dispatch(changeUserStatus({ userId, newStatus }));
+    if (res) {
+      alert("Successfully change.");
+    } else {
+      alert("Not succesfully change");
+    }
   };
 
   return { users, changeStatus };
