@@ -83,9 +83,9 @@ export const useReport = () => {
     if (res) {
       const newData = data.filter((r) => r.report.reportId !== reportId);
       setData(newData);
-      alert("User alert");
+      alert("User Alerted!");
     } else {
-      alert("Something went wrong in alerting user");
+      alert("Something went wrong alerting User!");
     }
   };
 

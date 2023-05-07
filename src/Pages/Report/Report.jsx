@@ -26,6 +26,16 @@ const Report = () => {
           </p>
         </div>
       </div>
+      <div className="grid grid-cols-8 py-4 px-2 border-b text-center">
+        <p>Name</p>
+        <p>Type</p>
+        <p>Reported ID</p>
+        <p>Report Description</p>
+        <p>Date Reported</p>
+        <p></p>
+        <p>Actions</p>
+        <p></p>
+      </div>
 
       {/* List contents  */}
       <div>

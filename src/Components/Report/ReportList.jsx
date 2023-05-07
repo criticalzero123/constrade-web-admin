@@ -61,7 +61,7 @@ const ReportList = ({
   };
 
   return (
-    <div className="grid grid-cols-8 gap-3 place-items-center w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
+    <div className="grid grid-cols-8 w-full text-center py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
       <div className="flex gap-2 place-items-center">
         <img
           className="rounded-full h-8 w-8 object-cover"

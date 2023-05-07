@@ -17,6 +17,12 @@ const SystemBug = () => {
           </p>
         </div>
       </div>
+      <div className="grid grid-cols-4 py-4 px-2 border-b">
+        <p className="text-center">Title</p>
+        <p className="text-center">Description</p>
+        <p className="text-center">Date Posted</p>
+        <p className="text-center">Status</p>
+      </div>
 
       {/* List contents  */}
       <div>

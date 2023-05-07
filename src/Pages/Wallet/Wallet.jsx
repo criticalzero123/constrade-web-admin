@@ -8,12 +8,10 @@ const Wallet = () => {
 
   const HeaderTitle = () => {
     return (
-      <div className="grid grid-cols-5">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
+      <div className="grid grid-cols-3 py-4 px-2 border-b">
+        <p>Wallet ID</p>
+        <p>Balance</p>
+        <p>History</p>
       </div>
     );
   };

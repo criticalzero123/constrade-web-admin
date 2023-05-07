@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CommunityList = ({ community }) => {
   return (
-    <div className="grid grid-cols-6 gap-3 place-items-center w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
+    <div className="grid grid-cols-6 w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
       <p>{community.name}</p>
       <p>{community.description}</p>
 

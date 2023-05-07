@@ -3,7 +3,7 @@ import { ValidIdType } from "../../utility/enums";
 
 const VerificationList = ({ request, onAccept, rejectRequest }) => {
   return (
-    <div className="grid grid-cols-8 gap-3 place-items-center w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
+    <div className="grid grid-cols-8 w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
       <p>
         {request.requestInfo.userId} {request.requestInfo.userName}
       </p>
