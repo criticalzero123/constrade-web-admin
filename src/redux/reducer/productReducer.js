@@ -1,31 +1,3 @@
-export const productDeleteReducer = (state = {}, action) => {
-  switch (action.type) {
-    case "PRODUCT_DELETE_REQUEST":
-      return {
-        ...state,
-        loading: true,
-      };
-
-    case "PRODUCT_DELETE_SUCCESS":
-      return {
-        loading: false,
-        data: action.payload,
-      };
-
-    case "PRODUCT_DELETE_ERROR":
-      return {
-        loading: false,
-        error: action.error,
-      };
-
-    case "PRODUCT_DELETE_LEAVE":
-      return {};
-
-    default:
-      return { ...state };
-  }
-};
-
 export const getProductsReducer = (state = {}, action) => {
   switch (action.type) {
     case "GET_PRODUCTS_REQUEST":

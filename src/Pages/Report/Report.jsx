@@ -3,7 +3,16 @@ import ReportList from "../../Components/Report/ReportList";
 import { useReport } from "../../hooks/report/useReport";
 
 const Report = () => {
-  const [reports] = useReport();
+  const [
+    reports,
+    cancelReport,
+    alertUser,
+    blockUser,
+    productDelete,
+    communityDelete,
+    communityPostDelete,
+    communityPostCommentDelete,
+  ] = useReport();
 
   return (
     <section className=" text-white font-bold bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] rounded-sm grow">
@@ -27,6 +36,13 @@ const Report = () => {
               user={_report.userInfo.user}
               person={_report.userInfo.person}
               key={index}
+              cancelReport={cancelReport}
+              alertUser={alertUser}
+              blockUser={blockUser}
+              productDelete={productDelete}
+              communityDelete={communityDelete}
+              communityPostDelete={communityPostDelete}
+              communityPostCommentDelete={communityPostCommentDelete}
             />
           ))}
       </div>

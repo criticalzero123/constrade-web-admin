@@ -1,18 +1,18 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { productDelete } from "../../redux/action/productAction";
-import { alertUser, blockUser } from "../../redux/action/userAction";
 import { reportType } from "../../utility/enums";
-import {
+
+const ReportList = ({
+  report,
+  user,
+  person,
+  cancelReport,
+  alertUser,
+  blockUser,
+  productDelete,
   communityDelete,
-  communityPostCommentDelete,
   communityPostDelete,
-} from "../../redux/action/communityAction";
-import { cancelReport } from "../../redux/action/reportAction";
-
-const ReportList = ({ report, user, person }) => {
-  const dispatch = useDispatch();
-
+  communityPostCommentDelete,
+}) => {
   const reportTypeToString = (reportNumber) => {
     switch (reportNumber) {
       case reportType.User:
@@ -35,24 +35,24 @@ const ReportList = ({ report, user, person }) => {
     }
   };
 
-  const deleteByReportType = (reportNumber, id, reportId) => {
+  const deleteByReportType = async (reportNumber, id, reportId) => {
     switch (reportNumber) {
       case reportType.User:
-        dispatch(blockUser(id, reportId));
+        await blockUser(id, reportId);
         break;
 
       case reportType.Product:
-        dispatch(productDelete(id, reportId));
+        await productDelete(id, reportId);
         break;
       case reportType.Community:
-        dispatch(communityDelete(id, reportId));
+        await communityDelete(id, reportId);
         break;
 
       case reportType.CommunityPost:
-        dispatch(communityPostDelete(id, reportId));
+        await communityPostDelete(id, reportId);
         break;
       case reportType.CommunityPostComment:
-        dispatch(communityPostCommentDelete(id, reportId));
+        await communityPostCommentDelete(id, reportId);
         break;
 
       default:
@@ -105,14 +105,14 @@ const ReportList = ({ report, user, person }) => {
 
       <p
         className="text-sm opacity-80 font-normal text-red-500 cursor-pointer"
-        onClick={() => dispatch(cancelReport(report.reportId))}
+        onClick={() => cancelReport(report.reportId)}
       >
         cancel
       </p>
       {report.reportType === reportType.User && (
         <p
           className="cursor-pointer text-red-500"
-          onClick={() => dispatch(alertUser(report.idReported))}
+          onClick={() => alertUser(report.reportId, report.idReported)}
         >
           alert
         </p>

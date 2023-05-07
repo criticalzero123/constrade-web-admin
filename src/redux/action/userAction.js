@@ -10,18 +10,12 @@ export const getAllUser = () => async (dispatch) => {
   }
 };
 
-export const blockUser = (id, reportId) => async (dispatch) => {
-  dispatch({ type: "BLOCK_USER_REQUEST" });
+export const blockUser = async (id, reportId) => {
   try {
     const res = await api.put(`/users/${id}/block?reportId=${reportId}`);
-    dispatch({ type: "BLOCK_USER_SUCCESS", payload: res.data.responseData });
-    if (res.data.responseData) {
-      alert("User Ban");
-    } else {
-      alert("User did not Ban");
-    }
+    return res.data.responseData;
   } catch (error) {
-    dispatch({ type: "BLOCK_USER_ERROR", error: error });
+    console.log(error);
   }
 };
 
@@ -34,22 +28,14 @@ export const changeUserStatus = async (info) => {
   }
 };
 
-export const alertUser = (id) => async (dispatch) => {
-  dispatch({ type: "ALERT_USER_REQUEST" });
+export const alertUser = async (id, reportId) => {
   try {
-    const res = await api.post(`/notification/alert/${id}`);
-    dispatch({
-      type: "ALERT_USER_SUCCESS",
-      payload: res.data.responseData,
-    });
-
-    if (res.data.responseData) {
-      alert("reported");
-    } else {
-      alert("something went wrong");
-    }
+    const res = await api.post(
+      `/notification/alert/${id}?reportId=${reportId}`
+    );
+    return res.data.responseData;
   } catch (error) {
-    dispatch({ type: "ALERT_USER_ERROR", error: error });
+    console.log(error);
   }
 };
 

@@ -1,16 +1,12 @@
 import api from "../../utility/api";
 
-export const productDelete = (id, reportId) => async (dispatch) => {
-  dispatch({ type: "PRODUCT_DELETE_REQUEST" });
+export const productDelete = async (id, reportId) => {
   try {
     const res = await api.delete(`/product/${id}?report=${reportId}`);
 
-    dispatch({
-      type: "PRODUCT_DELETE_SUCCESS",
-      payload: res.data.responseData,
-    });
+    return res.data.responseData;
   } catch (error) {
-    dispatch({ type: "PRODUCT_DELETE_ERROR", error: error });
+    console.log(error);
   }
 };
 
