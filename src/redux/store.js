@@ -22,8 +22,6 @@ import {
   doneFeedbackReducer,
 } from "./reducer/systemReducer";
 
-import { getWalletTransactionReducer } from "./reducer/walletReducer";
-
 import { getSubscriptionHistoryReducer } from "./reducer/subscriptionReducer";
 
 import { getAllVerificationRequestReducer } from "./reducer/verificationReducer";
@@ -35,7 +33,6 @@ const finalReducer = combineReducers({
   doneFeedbackReducer,
   getCommunityReducer,
   getProductsReducer,
-  getWalletTransactionReducer,
   getSubscriptionHistoryReducer,
   getCommunityPostCommentReducer,
   getCommunityPostReducer,

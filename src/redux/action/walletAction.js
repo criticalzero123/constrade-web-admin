@@ -9,15 +9,11 @@ export const getAllWallet = async () => {
   }
 };
 
-export const getWalletTransaction = (id) => async (dispatch) => {
-  dispatch({ type: "GET_WALLET_TRANSACTION_REQUEST" });
+export const getWalletTransaction = async (id) => {
   try {
     const res = await api.get(`/wallet/${id}`);
-    dispatch({
-      type: "GET_WALLET_TRANSACTION_SUCCESS",
-      payload: res.data.responseData,
-    });
+    return res.data.responseData;
   } catch (error) {
-    dispatch({ type: "GET_WALLET_TRANSACTION_ERROR", error: error });
+    console.log(error);
   }
 };
