@@ -17,11 +17,11 @@ const Account = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-5 p-4">
+      <div className="grid grid-cols-5 p-4 border-b">
         <p>Name</p>
-        <p>Rate</p>
+        <p className="text-center">Rate</p>
         <p>Date Created</p>
-        <p>Subscription History</p>
+        <p className="ml-2">History</p>
         <p className="text-center">Actions</p>
       </div>
       {/* List contents  */}

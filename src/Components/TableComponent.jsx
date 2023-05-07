@@ -11,7 +11,6 @@ const TableComponent = ({ title, description, children }) => {
           <p className="text-sm opacity-80 font-normal mt-1">{description}</p>
         </div>
       </div>
-
       {/* List contents  */}
       {children}
     </section>

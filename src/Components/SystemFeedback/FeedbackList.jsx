@@ -42,8 +42,8 @@ const FeedbackList = ({ data }) => {
           {new Date(data.dateSubmitted).toLocaleDateString()}
         </p>
         <select value={status} onChange={onChangeStatus} className="text-black">
-          <option value="active">Not Fix</option>
-          <option value="done">Fix</option>
+          <option value="active">Not Fixed</option>
+          <option value="done">Fixed</option>
         </select>
       </div>
     </div>

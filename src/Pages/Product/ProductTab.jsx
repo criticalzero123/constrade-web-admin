@@ -16,7 +16,13 @@ const ProductTab = () => {
           </p>
         </div>
       </div>
-
+      <div className="grid grid-cols-5 p-4 border-b">
+        <p>Product Name</p>
+        <p className="text-center">Description</p>
+        <p className="text-center">Platform</p>
+        <p className="text-center">Date Posted</p>
+        <p className="text-center">Status</p>
+      </div>
       {/* List contents  */}
       <div>
         {products &&
