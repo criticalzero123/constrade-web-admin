@@ -13,7 +13,7 @@ const SystemBug = () => {
         <div>
           <h3>Accounts</h3>
           <p className="text-sm opacity-80 font-normal mt-1">
-            Account information
+            Account Information
           </p>
         </div>
       </div>

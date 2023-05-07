@@ -148,7 +148,7 @@ export default function Nav() {
           <Link to="/dashboard/feedback">
             <li
               className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
-                "user-feedback"
+                "feedback"
               )}`}
             >
               <MdFeedback
@@ -159,11 +159,7 @@ export default function Nav() {
             </li>
           </Link>
           <Link to="/dashboard/bug">
-            <li
-              className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle(
-                "bug-report"
-              )}`}
-            >
+            <li className={`py-3 mb-2 rounded-sm px-3 ${onActiveStyle("bug")}`}>
               <MdBugReport
                 size={18}
                 className="inline-block align-text-bottom mr-2"
