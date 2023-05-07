@@ -21,7 +21,7 @@ const Account = () => {
         <p>Name</p>
         <p className="text-center">Rate</p>
         <p>Date Created</p>
-        <p className="ml-2">History</p>
+        <p>History</p>
         <p className="text-center">Actions</p>
       </div>
       {/* List contents  */}

@@ -28,7 +28,7 @@ const FeedbackList = ({ data }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-4 gap-3 place-items-center w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
+      <div className="grid grid-cols-4 place-items-center w-full py-3 px-2 border-b-2 border-[rgba(255,255,255,0.15)]">
         <div className="flex gap-2 place-items-center">
           <div>
             <p className="text-md capitalize">{data.title}</p>

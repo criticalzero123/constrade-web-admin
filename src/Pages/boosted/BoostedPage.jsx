@@ -6,10 +6,24 @@ import { useBoostProduct } from "../../hooks/boosted/useBoostProduct";
 const BoostedPage = () => {
   const [products, onCancel] = useBoostProduct();
 
+  const HeaderTitle = () => {
+    return (
+      <div className="grid grid-cols-6 py-4 px-2 border-b">
+        <p>Name</p>
+        <p>ID No.</p>
+        <p>ID Type</p>
+        <p>Date</p>
+        <p>Status</p>
+        <p>ID Active</p>
+      </div>
+    );
+  };
+
   return (
     <TableComponent
       title={"Boosted Product"}
       description="Boosted Product Information"
+      headerTitle={<HeaderTitle />}
     >
       <div>
         {products &&

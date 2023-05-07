@@ -16,12 +16,12 @@ const ProductTab = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-5 p-4 border-b">
+      <div className="grid grid-cols-5 py-4 px-2 border-b">
         <p>Product Name</p>
-        <p className="text-center">Description</p>
-        <p className="text-center">Platform</p>
-        <p className="text-center">Date Posted</p>
-        <p className="text-center">Status</p>
+        <p>Description</p>
+        <p>Platform</p>
+        <p>Date Posted</p>
+        <p>Status</p>
       </div>
       {/* List contents  */}
       <div>
