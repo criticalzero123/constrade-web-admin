@@ -33,7 +33,9 @@ export default function Nav() {
 
   const handleLogout = () => {
     localStorage.removeItem("account");
-    window.location.href = "/";
+    setTimeout(() => {
+      window.location.href = "/";
+    }, [1000]);
   };
 
   return (
