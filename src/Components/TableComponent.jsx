@@ -1,6 +1,6 @@
 import React from "react";
 
-const TableComponent = ({ title, description, children }) => {
+const TableComponent = ({ title, description, children, headerTitle }) => {
   return (
     <section className=" text-white font-bold bg-[rgba(255,255,255,0.1)] border-2 border-[rgba(255,255,255,0.15)] rounded-sm grow">
       {/* Header */}
@@ -11,6 +11,7 @@ const TableComponent = ({ title, description, children }) => {
           <p className="text-sm opacity-80 font-normal mt-1">{description}</p>
         </div>
       </div>
+      {headerTitle}
       {/* List contents  */}
       {children}
     </section>

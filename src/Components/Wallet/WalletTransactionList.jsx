@@ -13,21 +13,8 @@ const WalletTransactionList = ({ data, walletId }) => {
         return "Refund";
       case OtherTransactionType.AddCount:
         return "Add Post Count";
-    }
-  };
-
-  const getTypeSign = () => {
-    switch (data.transactionType) {
-      case OtherTransactionType.Boost:
-        return false;
-      case OtherTransactionType.Subscribe:
-        return false;
-      case OtherTransactionType.Topup:
-        return true;
-      case OtherTransactionType.Refund:
-        return true;
-      case OtherTransactionType.AddCount:
-        return false;
+      default:
+        return "";
     }
   };
 
