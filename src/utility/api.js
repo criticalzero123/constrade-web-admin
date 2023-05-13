@@ -4,7 +4,7 @@ const createApi = () => {
 
   const _config = axios.create({
     baseURL: url,
-    timeout: 5000,
+    // timeout: 5000,
   });
 
   return {
